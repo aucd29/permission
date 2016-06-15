@@ -26,10 +26,15 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created by <a href="mailto:aucd29@gmail.com">Burke Choi</a> on 2016. 6. 15.. <p/>
  */
 public class PermissionActivity extends AppCompatActivity {
+    private static final Logger mLog = LoggerFactory.getLogger(PermissionActivity.class);
+
     private static final int REQUEST_CODE = 0;
     private static final int CALLBACK_PERMISSION = 1;
 
@@ -42,6 +47,7 @@ public class PermissionActivity extends AppCompatActivity {
 
         mPermissions = getIntent().getStringArrayExtra(RealTimePermission.KEY_PERMISSIONS);
         if (mPermissions == null) {
+            mLog.error("ERROR, PERMISSION == null");
             finish();
             return ;
         }
@@ -56,6 +62,7 @@ public class PermissionActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(final int requestCode, final String[] permissions, int[] grantResults) {
         if (mListener == null) {
+            mLog.error("ERROR, LISTENER == null");
             finish();
             return ;
         }
@@ -99,6 +106,7 @@ public class PermissionActivity extends AppCompatActivity {
 
                 if (res) {
                     if (mListener == null) {
+                        mLog.error("ERROR, LISTENER == null");
                         finish();
 
                         return ;

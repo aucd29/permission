@@ -24,24 +24,33 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created by <a href="mailto:aucd29@gmail.com">Burke Choi</a> on 2016. 6. 15.. <p/>
  */
 public class RealTimePermission {
+    private static final Logger mLog = LoggerFactory.getLogger(RealTimePermission.class);
+
     public static final int KEY_REQ_CODE = 0;
     public static final String KEY_PERMISSIONS = "permissions";
 
     public static synchronized void check(Activity activity, String[] permissions, PermissionListener listener) {
         if (listener == null) {
+            mLog.error("ERROR, LISTENER == null");
             return ;
         }
 
         if (activity == null) {
+            mLog.error("ERROR, activity == null");
             listener.result(false);
             return ;
         }
 
         if (permissions == null) {
+            mLog.error("ERROR, permissions == null");
+
             listener.result(true);
             return ;
         }
