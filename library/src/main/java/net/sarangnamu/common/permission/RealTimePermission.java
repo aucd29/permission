@@ -61,7 +61,7 @@ public class RealTimePermission {
             Intent intent = new Intent(activity, PermissionActivity.class);
             intent.putExtra(KEY_PERMISSIONS, permissions);
 
-            activity.startActivityForResult(intent, KEY_REQ_CODE);
+            activity.startActivity(intent);
             return ;
         }
 

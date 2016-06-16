@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name=".PermissionActivity"
+            android:name="net.sarangnamu.common.permission.PermissionActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Transparent"

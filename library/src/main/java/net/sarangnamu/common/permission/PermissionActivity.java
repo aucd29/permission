@@ -42,8 +42,8 @@ public class PermissionActivity extends AppCompatActivity {
     private static PermissionListener mListener;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         mPermissions = getIntent().getStringArrayExtra(RealTimePermission.KEY_PERMISSIONS);
         if (mPermissions == null) {
