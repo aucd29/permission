@@ -21,7 +21,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +44,7 @@ public class PermissionActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mPermissions = getIntent().getStringArrayExtra(RealTimePermission.KEY_PERMISSIONS);
+        mPermissions = getIntent().getStringArrayExtra(RunTimePermission.KEY_PERMISSIONS);
         if (mPermissions == null) {
             mLog.error("ERROR, PERMISSION == null");
             finish();
@@ -102,7 +101,7 @@ public class PermissionActivity extends AppCompatActivity {
 
         switch (requestCode) {
             case CALLBACK_PERMISSION:
-                boolean res = RealTimePermission.checkPermission(PermissionActivity.this, mPermissions);
+                boolean res = RunTimePermission.checkPermission(PermissionActivity.this, mPermissions);
 
                 if (res) {
                     if (mListener == null) {

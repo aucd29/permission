@@ -30,8 +30,8 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by <a href="mailto:aucd29@gmail.com">Burke Choi</a> on 2016. 6. 15.. <p/>
  */
-public class RealTimePermission {
-    private static final Logger mLog = LoggerFactory.getLogger(RealTimePermission.class);
+public class RunTimePermission {
+    private static final Logger mLog = LoggerFactory.getLogger(RunTimePermission.class);
 
     public static final int KEY_REQ_CODE = 0;
     public static final String KEY_PERMISSIONS = "permissions";
