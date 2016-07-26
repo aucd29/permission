@@ -14,6 +14,6 @@ Step 2. Add the dependency
 
 ```gradle
 dependencies {
-    compile 'com.github.aucd29:permision:1.0.3'
+    compile 'com.github.aucd29:permision:1.0.4'
 }
 ```
