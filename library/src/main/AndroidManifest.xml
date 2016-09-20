@@ -5,7 +5,7 @@
     <application>
         <activity
             android:name="net.sarangnamu.common.permission.PermissionActivity"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Transparent"
             android:windowSoftInputMode="stateAlwaysHidden"

@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 
 import org.slf4j.Logger;
@@ -68,17 +69,20 @@ public class RunTimePermission {
         listener.result(true);
     }
 
-    public static boolean checkPermission(Context context, String[] permissions) {
+    public static boolean checkPermission(@NonNull Context context, @NonNull String[] permissions) {
+        boolean permissionResult = true;
+
         for (String permission : permissions) {
-            if (checkPermission(context, permission)) {
-                return true;
+            if (checkSelfPermission(context, permission)) {
+                permissionResult = false;
+                break;
             }
         }
 
-        return false;
+        return permissionResult;
     }
 
-    public static boolean checkPermission(Context context, String permission) {
+    static boolean checkSelfPermission(Context context, String permission) {
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
             return ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED;
         }

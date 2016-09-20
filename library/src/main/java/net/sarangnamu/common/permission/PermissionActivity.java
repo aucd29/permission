@@ -66,10 +66,19 @@ public class PermissionActivity extends AppCompatActivity {
             return ;
         }
 
-        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        boolean grantResult = true;
+        for (int result : grantResults) {
+            if (result == PackageManager.PERMISSION_DENIED) {
+                grantResult = false;
+                break;
+            }
+        }
+
+        if (grantResult) {
+            finish();
+
             mListener.result(true);
             mListener = null;
-            finish();
         } else {
             showPermissionDialog();
         }

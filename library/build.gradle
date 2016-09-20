@@ -13,7 +13,7 @@ repositories {
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'me.tatarka.retrolambda'
 
 android {
@@ -24,7 +24,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0.2"
+        versionName "1.0.5"
     }
     buildTypes {
         release {
@@ -36,7 +36,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.github.aucd29:common:1.0.6'
+    compile 'com.github.aucd29:common:1.0.9'
 }
 
 // build a jar with source files
