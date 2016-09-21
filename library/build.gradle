@@ -24,7 +24,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0.5"
+        versionName "1.0.6"
     }
     buildTypes {
         release {
@@ -36,7 +36,8 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.github.aucd29:common:1.0.9'
+
+    compile 'com.github.aucd29:common:1.0.14'
 }
 
 // build a jar with source files
