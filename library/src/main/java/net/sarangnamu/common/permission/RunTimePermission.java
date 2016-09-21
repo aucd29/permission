@@ -73,7 +73,7 @@ public class RunTimePermission {
         boolean permissionResult = true;
 
         for (String permission : permissions) {
-            if (checkSelfPermission(context, permission)) {
+            if (!checkSelfPermission(context, permission)) {
                 permissionResult = false;
                 break;
             }
