@@ -2,4 +2,5 @@
     <string name="permission_title">Add Permission</string>
     <string name="permission_error">Permissions error occurred.</string>
     <string name="permission_message">"The additional rights are needed to properly run the app."</string>
+    <string name="permission_setting">Setting</string>
 </resources>

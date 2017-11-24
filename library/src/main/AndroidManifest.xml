@@ -4,11 +4,11 @@
 
     <application>
         <activity
-            android:name="net.sarangnamu.common.permission.PermissionActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Transparent"
             android:windowSoftInputMode="stateAlwaysHidden"
+            android:name="net.sarangnamu.common.permission.PermissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HoneTheme.Transparent"
             />
     </application>
 
