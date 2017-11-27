@@ -20,6 +20,11 @@ import android.support.v7.app.AppCompatActivity
         Log.e("PERMISSION", "res = $res")
    }
  * ```
+ * ```kotlin
+ * context.runtimePermission(arrayListOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), { res ->
+        Log.e("PERMISSION", "res = $res")
+   }
+ * ```
  */
 
 private val KEY_PERMISSION: String
