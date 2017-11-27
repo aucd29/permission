@@ -1,7 +1,6 @@
 package net.sarangnamu.common.permission
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -15,6 +14,12 @@ import android.support.v7.app.AppCompatActivity
 
 /**
  * Created by <a href="mailto:aucd29@hanwha.com">Burke Choi</a> on 2017. 11. 23.. <p/>
+ *
+ * ```kotlin
+ * context.mainRuntimePermission(arrayListOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), { res ->
+        Log.e("PERMISSION", "res = $res")
+   }
+ * ```
  */
 
 private val KEY_PERMISSION: String

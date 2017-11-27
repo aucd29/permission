@@ -6,9 +6,9 @@
         <activity
             android:launchMode="singleTask"
             android:windowSoftInputMode="stateAlwaysHidden"
-            android:name="net.sarangnamu.common.permission.PermissionActivity"
+            android:name=".PermissionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/HoneTheme.Transparent"
+            android:theme="@style/AppTheme.Transparent"
             />
     </application>
 
