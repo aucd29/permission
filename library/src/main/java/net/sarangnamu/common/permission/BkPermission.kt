@@ -71,6 +71,8 @@ class PermissionActivity : AppCompatActivity() {
 
         if (!grantRes && requestCode == 1) {
             showDialog()
+        } else {
+            finish()
         }
     }
 
@@ -100,6 +102,7 @@ class PermissionActivity : AppCompatActivity() {
             setCancelable(false)
             setPositiveButton(android.R.string.ok, { d, w ->
                 d.dismiss()
+                finish()
             })
             setNegativeButton(R.string.permission_setting, { d, w ->
                 startActivityForResult(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
@@ -107,6 +110,7 @@ class PermissionActivity : AppCompatActivity() {
                 }, 0)
 
                 d.dismiss()
+                finish()
             })
         }.show()
     }

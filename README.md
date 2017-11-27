@@ -18,3 +18,8 @@ dependencies {
     compile 'com.github.aucd29:permision:1.0.7'
 }
 ```
+```gradle
+// kotlin
+dependencies {
+    compile 'com.github.aucd29:permision:2.0.0'
+}
