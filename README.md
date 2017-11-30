@@ -21,5 +21,5 @@ dependencies {
 ```gradle
 // kotlin
 dependencies {
-    compile 'com.github.aucd29:permision:2.0.0'
+    implementation 'com.github.aucd29:permision:2.0.0'
 }
